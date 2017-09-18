@@ -4,7 +4,7 @@ An automated webservice for glances (the easy way)
 
 # Install instructions
 
-Extract the zip in /etc/system/systemd/
+Extract the zip in /etc/systemd/system/
 
 Open a shell and run the following
 
