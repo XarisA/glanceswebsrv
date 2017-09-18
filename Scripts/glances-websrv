@@ -1,0 +1,22 @@
+#! /bin/bash
+
+Username="usernamegoeshere"
+Password="passwordgoeshere"
+SavePass="No"
+
+
+/usr/bin/expect <<EOD
+# Uncomment to stop showing up on stdout
+#log_user 0
+set timeout -1
+spawn glances -w --username --password
+expect "Define the Glances webserver username: "
+send "$Username\r"
+expect "Define the Glances webserver password*"
+send "$Password\r"
+expect "Password (confirm): "
+send "$Password\r"
+expect "Do you want to save the password?*"
+send "$SavePass\r"
+expect eof
+EOD
