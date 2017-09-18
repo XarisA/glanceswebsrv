@@ -1,0 +1,9 @@
+[Unit]
+Description=Glances
+
+[Service]
+ExecStart=/scripts/glances-websrv
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
